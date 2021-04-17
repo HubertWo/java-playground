@@ -64,8 +64,11 @@ class VehicleTest {
     }
 
     @Test
+    @DisplayName("toString() is implemented")
     void toString_isImplemented() {
-        
+        var velomobile = new Vehicle("Velomobile", "Legs", true);
+
+        assertThat(velomobile.toString()).isEqualTo("Vehicle[name=Velomobile, energySource=Legs, isEco=true]");
     }
 
 }
