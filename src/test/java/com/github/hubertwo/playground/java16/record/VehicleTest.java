@@ -1,9 +1,11 @@
 package com.github.hubertwo.playground.java16.record;
 
+import com.google.common.collect.ImmutableList;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static com.google.common.truth.Truth.assertThat;
+import static org.assertj.core.api.Assertions.catchThrowable;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 class VehicleTest {
 
@@ -13,6 +15,20 @@ class VehicleTest {
         var vehicle = new Vehicle("Bike", "Legs", true);
 
         assertThat(vehicle.name()).isEqualTo("Bike");
+    }
+
+    @Test
+    @DisplayName("Compact constructor")
+    void record_compactConstructor() {
+        ImmutableList<String> givenPassengers = null;
+
+        Throwable actualException = catchThrowable(
+                // Check the declaration of Vehicle constructor
+                () -> new Vehicle("Bike", "Legs", true, givenPassengers)
+        );
+
+        assertThat(actualException).isInstanceOf(NullPointerException.class)
+                .hasMessage("Passengers can not be null");
     }
 
     @Test
@@ -69,9 +85,13 @@ class VehicleTest {
     @Test
     @DisplayName("toString() is implemented")
     void toString_isImplemented() {
-        var velomobile = new Vehicle("Velomobile", "Legs", true);
+        var velomobile = new Vehicle(
+                "Velomobile",
+                "Legs", true
+        );
 
-        assertThat(velomobile.toString()).isEqualTo("Vehicle[name=Velomobile, energySource=Legs, isEco=true]");
+        assertThat(velomobile.toString()).isEqualTo(
+                "Vehicle[name=Velomobile, energySource=Legs, isEco=true, passengers=[]]");
     }
 
 }
