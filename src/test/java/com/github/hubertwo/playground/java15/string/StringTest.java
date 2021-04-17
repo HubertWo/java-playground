@@ -7,18 +7,19 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class StringTest {
 
+    /**
+     * {@see <a href="https://openjdk.java.net/jeps/378>More</a>}
+     */
     @Test
-    @DisplayName("Text Blocks")
+    @DisplayName("Text blocks")
     void text_blocks() {
-        String concatenatedString = "No more escaping and concatenation needed!\n" +
+        String concatenatedString = "No more escaping \", \\n and concatenation needed!\n" +
                 "Hurray!";
 
         var actualString = """
-                No more escaping and concatenation needed!
+                No more escaping ", \\n and concatenation needed!
                 Hurray!""";
 
         assertThat(actualString).isEqualTo(concatenatedString);
-
-
     }
 }
