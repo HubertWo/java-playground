@@ -54,7 +54,10 @@ class VehicleTest {
     @DisplayName("HashCode is implemented")
     void hashCode_isImplemented() {
         var electricCar = new Vehicle("Car", "Battery", true);
+        var electricCar2 = new Vehicle("Car", "Battery", true);
         var conventionalCar = new Vehicle("Car", "Gasoline", false);
+
+        assertThat(electricCar.hashCode()).isEqualTo(electricCar2.hashCode());
 
         // Just for learning purposes.
         // It may happen that two objects have the same hashCode.
