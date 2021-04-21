@@ -80,7 +80,6 @@ class VehicleTest {
         // file in test resources folder and Vehicle's constructor.
         final File givenFile =
                 new File("src/test/resources/java16/record/ManipulatedSerializedRecord.txt");
-
         assertTrue(givenFile.exists());
 
         InvalidObjectException actualException = assertThrows(InvalidObjectException.class, () -> {
@@ -136,7 +135,7 @@ class VehicleTest {
         var electricCar2 = new Vehicle("Car", "Battery", true, /*price*/ BigDecimal.ONE);
         var conventionalCar = new Vehicle("Car", "Gasoline", false, /*price*/ BigDecimal.ONE);
 
-        assertEquals(electricCar.hashCode(),electricCar2.hashCode());
+        assertEquals(electricCar.hashCode(), electricCar2.hashCode());
 
         // Just for learning purposes.
         // It may happen that two objects have the same hashCode.
