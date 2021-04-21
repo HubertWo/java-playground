@@ -46,6 +46,7 @@ class VehicleTest {
     }
 
     @Test
+    @DisplayName("Serialize and deserialize record")
     public void record_serialize() throws IOException, ClassNotFoundException {
         File givenFile = Files.newTemporaryFile();
         final var electricBike = new Vehicle("Bike", "Battery", true, /*price*/ BigDecimal.ONE);
