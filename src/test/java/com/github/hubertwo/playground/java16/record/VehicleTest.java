@@ -9,12 +9,16 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InvalidObjectException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.math.BigDecimal;
 
 import static org.assertj.core.api.Assertions.catchThrowable;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class VehicleTest {
 
@@ -47,7 +51,7 @@ class VehicleTest {
 
     @Test
     @DisplayName("Serialize and deserialize record")
-    public void record_serialize() throws IOException, ClassNotFoundException {
+    void record_serialize() throws IOException, ClassNotFoundException {
         File givenFile = Files.newTemporaryFile();
         final var electricBike = new Vehicle("Bike", "Battery", true, /*price*/ BigDecimal.ONE);
 
@@ -59,7 +63,7 @@ class VehicleTest {
 
         // Read record from file
         final Vehicle deserializedElectricBike;
-        try(FileInputStream fileInputStream = new FileInputStream(givenFile)) {
+        try (FileInputStream fileInputStream = new FileInputStream(givenFile)) {
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
             deserializedElectricBike = (Vehicle) objectInputStream.readObject();
         }
@@ -68,6 +72,27 @@ class VehicleTest {
         assertThat(deserializedElectricBike).isEqualTo(electricBike);
     }
 
+    @Test
+    @DisplayName("Deserialize manipulated serialized record")
+    void record_deserializeManipulatedRecord() {
+        // Serialized record in the provided file has price set to -1
+        // which is not allowed by the Vehicle constructor. Please find
+        // file in test resources folder and Vehicle's constructor.
+        final File givenFile =
+                new File("src/test/resources/java16/record/ManipulatedSerializedRecord.txt");
+
+        assertTrue(givenFile.exists());
+
+        InvalidObjectException actualException = assertThrows(InvalidObjectException.class, () -> {
+                    try (FileInputStream fileInputStream = new FileInputStream(givenFile)) {
+                        ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+                        objectInputStream.readObject();
+                    }
+                }
+        );
+
+        assertThat(actualException).hasMessage("Price cannot be smaller than 0.");
+    }
 
     @Test
     @DisplayName("Implicit inherits from Record class")
@@ -111,7 +136,7 @@ class VehicleTest {
         var electricCar2 = new Vehicle("Car", "Battery", true, /*price*/ BigDecimal.ONE);
         var conventionalCar = new Vehicle("Car", "Gasoline", false, /*price*/ BigDecimal.ONE);
 
-        assertThat(electricCar.hashCode()).isEqualTo(electricCar2.hashCode());
+        assertEquals(electricCar.hashCode(),electricCar2.hashCode());
 
         // Just for learning purposes.
         // It may happen that two objects have the same hashCode.
@@ -130,7 +155,9 @@ class VehicleTest {
                 /*price*/ BigDecimal.ONE
         );
 
-        assertThat(velomobile.toString()).isEqualTo(
+        String actualString = velomobile.toString();
+
+        assertThat(actualString).isEqualTo(
                 "Vehicle[name=Velomobile, energySource=Legs, isEco=true, price=1, passengers=[]]");
     }
 
