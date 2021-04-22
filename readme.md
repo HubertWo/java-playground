@@ -16,8 +16,8 @@ mvn test
 ```
 
 ## Java 16 
- - [Record](main/src/test/java/com/github/hubertwo/playground/java16/record/VehicleTest.java)
+ - [Record](src/test/java/com/github/hubertwo/playground/java16/record/VehicleTest.java)
 ## Java 15
-- [Code blocks](main/src/test/java/com/github/hubertwo/playground/java15/string/StringTest.java)
+- [Code blocks](src/test/java/com/github/hubertwo/playground/java15/string/StringTest.java)
 ## Old Java
-- [POJO deserialization issue](main/src/test/java/com/github/hubertwo/playground/javaold/serialization/SerializationTest.java)
+- [POJO deserialization issue](src/test/java/com/github/hubertwo/playground/javaold/serialization/SerializationTest.java)
