@@ -1,4 +1,5 @@
 #Java Playground
+
 Project with various Java functionalities categorized by version. 
 All examples are in form of unit tests, so you can try them by your own and test your ideas. 
 
