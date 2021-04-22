@@ -74,7 +74,7 @@ class VehicleTest {
 
     /**
      * Check old Java serialization issue here:
-     * {@link com.github.hubertwo.playground.javaOld.serialization.SerializationTest#pojo_deserializeManipulatedPojo()}
+     * {@link com.github.hubertwo.playground.javaold.serialization.SerializationTest#pojo_deserializeManipulatedPojo()}
      */
     @Test
     @DisplayName("Deserialize manipulated serialized record")

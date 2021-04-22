@@ -12,7 +12,6 @@ public class OldVehicle implements Serializable {
     @Serial
     private static final long serialVersionUID = -8768588090385373495L;
 
-
     private final String name;
     private final String energySource;
     private final boolean isEco;
