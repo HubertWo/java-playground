@@ -2,7 +2,7 @@
 Project with various Java functionalities categorized by version. 
 All examples are in form of unit tests, so you can try them by your own and test your ideas. 
 
-![Build status](https://github.com/hubertwo/java-playground/actions/workflows/maven.yml/badge.svg)
+[![Build status](https://github.com/hubertwo/java-playground/actions/workflows/maven.yml/badge.svg)](https://github.com/HubertWo/java-playground/actions)
 
 ## HowTo
 #### Run all tests 
