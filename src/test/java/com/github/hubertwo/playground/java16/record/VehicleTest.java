@@ -40,7 +40,7 @@ class VehicleTest {
                 () -> new Vehicle(
                         "Bike",
                         "Legs",
-                        /*isEco*/true,
+                        /*isEco*/ true,
                         /*price*/ BigDecimal.ONE,
                         givenPassengers
                 ));
