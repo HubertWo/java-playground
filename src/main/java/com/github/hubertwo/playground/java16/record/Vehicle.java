@@ -6,9 +6,7 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Objects;
 
-/**
- * @see <a href="https://docs.oracle.com/en/java/javase/16/language/records.html">Record Classes</a>
- */
+
 public record Vehicle(
         String name,
         String energySource,
