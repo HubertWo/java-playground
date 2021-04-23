@@ -17,7 +17,7 @@ class StringTest {
                 "Hurray!";
 
         var actualString = """
-                No more escaping ", \\n and concatenation needed!
+                No more quote escaping ", \\n and concatenation needed!
                 Hurray!""";
 
         assertThat(actualString).isEqualTo(concatenatedString);
