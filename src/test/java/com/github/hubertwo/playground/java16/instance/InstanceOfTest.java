@@ -1,4 +1,4 @@
-package com.github.hubertwo.playground.java16.streams;
+package com.github.hubertwo.playground.java16.instance;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
