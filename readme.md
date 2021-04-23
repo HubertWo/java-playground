@@ -17,6 +17,7 @@ mvn test
 
 ## Java 16 
  - [Record](src/test/java/com/github/hubertwo/playground/java16/record/VehicleTest.java)
+ - [Streams](src/test/java/com/github/hubertwo/playground/java16/streams/StreamTest.java)
 ## Java 15
 - [Code blocks](src/test/java/com/github/hubertwo/playground/java15/string/StringTest.java)
 ## Old Java
