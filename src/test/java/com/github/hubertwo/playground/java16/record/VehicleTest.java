@@ -53,7 +53,7 @@ class VehicleTest {
     @DisplayName("Serialize and deserialize record")
     void record_serialize() throws IOException, ClassNotFoundException {
         File givenFile = Files.newTemporaryFile();
-        final var electricBike = new Vehicle("Bike", "Battery", true, /*price*/ BigDecimal.ONE);
+        final var electricBike = new Vehicle("Bike", "Battery", /* isEco */true, BigDecimal.ONE);
 
         // Write record to file
         try (FileOutputStream fileOutputStream = new FileOutputStream(givenFile)) {
@@ -100,7 +100,7 @@ class VehicleTest {
     @Test
     @DisplayName("Implicit inherits from Record class")
     void recordInheritsFromRecord() {
-        var vehicle = new Vehicle("Car", "Battery", true, /*price*/ BigDecimal.ONE);
+        var vehicle = new Vehicle("Car", "Battery", /* isEco */true, /*price*/ BigDecimal.ONE);
 
         assertThat(vehicle).isInstanceOf(Record.class);
     }
@@ -124,9 +124,9 @@ class VehicleTest {
     @Test
     @DisplayName("Equals is implemented")
     void equals_isImplemented() {
-        var electricBike = new Vehicle("Bike", "Battery", true, /*price*/ BigDecimal.ONE);
-        var electricBike2 = new Vehicle("Bike", "Battery", true, /*price*/ BigDecimal.ONE);
-        var simpleBike = new Vehicle("Bike", "Legs", true, /*price*/ BigDecimal.ONE);
+        var electricBike = new Vehicle("Bike", "Battery", /* isEco */true, /*price*/ BigDecimal.ONE);
+        var electricBike2 = new Vehicle("Bike", "Battery", /* isEco */true, /*price*/ BigDecimal.ONE);
+        var simpleBike = new Vehicle("Bike", "Legs", /* isEco */true, /*price*/ BigDecimal.ONE);
 
         assertThat(electricBike).isEqualTo(electricBike2);
         assertThat(electricBike).isNotEqualTo(simpleBike);
@@ -135,9 +135,9 @@ class VehicleTest {
     @Test
     @DisplayName("HashCode is implemented")
     void hashCode_isImplemented() {
-        var electricCar = new Vehicle("Car", "Battery", true, /*price*/ BigDecimal.ONE);
-        var electricCar2 = new Vehicle("Car", "Battery", true, /*price*/ BigDecimal.ONE);
-        var conventionalCar = new Vehicle("Car", "Gasoline", false, /*price*/ BigDecimal.ONE);
+        var electricCar = new Vehicle("Car", "Battery", /* isEco */true, /*price*/ BigDecimal.ONE);
+        var electricCar2 = new Vehicle("Car", "Battery", /* isEco */ true, /*price*/ BigDecimal.ONE);
+        var conventionalCar = new Vehicle("Car", "Gasoline", /* isEco */ false, /*price*/ BigDecimal.ONE);
 
         assertEquals(electricCar.hashCode(), electricCar2.hashCode());
 

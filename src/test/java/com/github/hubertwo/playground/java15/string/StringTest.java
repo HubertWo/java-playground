@@ -13,6 +13,9 @@ class StringTest {
     @Test
     @DisplayName("Text blocks")
     void text_blocks() {
+
+
+
         String concatenatedString = "No more quote escaping \", \\n and concatenation needed!\n" +
                 "Hurray!";
 

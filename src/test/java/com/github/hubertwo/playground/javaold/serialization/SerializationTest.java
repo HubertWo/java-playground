@@ -27,7 +27,7 @@ class SerializationTest {
 
         IllegalArgumentException actualException = assertThrows(
                 IllegalArgumentException.class,
-                () -> new OldVehicle("Bike", "Legs", true, /*price*/ givenPrice, ImmutableList.of())
+                () -> new OldVehicle("Bike", "Legs", /* isEco */ true, givenPrice, ImmutableList.of())
         );
 
         assertThat(actualException).hasMessage("Price cannot be smaller than 0.");
@@ -37,7 +37,7 @@ class SerializationTest {
     @DisplayName("Serialize and deserialize POJO")
     void serializePojo() throws IOException, ClassNotFoundException {
         File givenFile = Files.newTemporaryFile();
-        final var electricBike = new OldVehicle("Bike", "Legs", true, /*price*/ BigDecimal.valueOf(1), ImmutableList.of());
+        final var electricBike = new OldVehicle("Bike", "Legs", /* isEco */ true, BigDecimal.valueOf(1), ImmutableList.of());
 
         // Write record to file
         try (FileOutputStream fileOutputStream = new FileOutputStream(givenFile)) {
