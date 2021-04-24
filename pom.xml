@@ -7,6 +7,21 @@
     <groupId>com.github.hubertwo.playground.java</groupId>
     <artifactId>java-playground</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+    <developers>
+        <developer>
+            <name>HubertWo</name>
+            <url>https://github.com/HubertWo</url>
+        </developer>
+    </developers>
+
+    <properties>
+        <maven.compiler.source>16</maven.compiler.source>
+        <maven.compiler.target>16</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <junit.jupiter.version>5.4.2</junit.jupiter.version>
+    </properties>
+
     <build>
         <plugins>
             <plugin>
@@ -14,8 +29,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <source>16</source>
-                    <target>16</target>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
                 </configuration>
             </plugin>
             <plugin>
@@ -25,12 +40,6 @@
         </plugins>
     </build>
 
-    <properties>
-        <maven.compiler.source>16</maven.compiler.source>
-        <maven.compiler.target>16</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <junit.jupiter.version>5.4.2</junit.jupiter.version>
-    </properties>
 
     <dependencies>
         <dependency>
