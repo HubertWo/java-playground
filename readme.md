@@ -9,9 +9,9 @@ All examples are in form of unit tests, so you can try them by your own and test
 ```shell 
 mvn test
 ```
-```shell
+```shellq
 [INFO] Results:
-[INFO] Tests run: X, Failures: 0, Errors: 0, Skipped: 0
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0
 [INFO] BUILD SUCCESS
 ```
 
@@ -19,6 +19,8 @@ mvn test
  - [Record](src/test/java/com/github/hubertwo/playground/java16/record/VehicleTest.java)
  - [Streams](src/test/java/com/github/hubertwo/playground/java16/streams/StreamTest.java)
 -  [Pattern matching for instanceof](src/test/java/com/github/hubertwo/playground/java16/instance/InstanceOfTest.java)
+-  [Switch Expressions (yield)](src/test/java/com/github/hubertwo/playground/java16/swtichexpression/SwitchExpressionTest.java)
+
 ## Java 15
 - [Code blocks](src/test/java/com/github/hubertwo/playground/java15/string/StringTest.java)
 ## Old Java
