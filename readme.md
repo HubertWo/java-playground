@@ -23,7 +23,7 @@ mvn test
 -  [Switch Expressions (yield)](src/test/java/com/github/hubertwo/playground/java16/swtichexpression/SwitchExpressionTest.java)
 
 ## Java 15
-- [Text Blocks](src/test/java/com/github/hubertwo/playground/java15/string/StringTest.java)
+- [Text Blocks](src/test/java/com/github/hubertwo/playground/java15/string/TextBlocksTest.java)
 ## Old Java
 - [POJO deserialization issue](src/test/java/com/github/hubertwo/playground/javaold/serialization/SerializationTest.java)
 

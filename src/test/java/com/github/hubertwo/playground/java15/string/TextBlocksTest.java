@@ -5,17 +5,14 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class StringTest {
+class TextBlocksTest {
 
     /**
      * {@see <a href="https://openjdk.java.net/jeps/378>More</a>}
      */
     @Test
-    @DisplayName("Text blocks")
-    void text_blocks() {
-
-
-
+    @DisplayName("Text Blocks")
+    void textBlocks() {
         String concatenatedString = "No more quote escaping \", \\n and concatenation needed!\n" +
                 "Hurray!";
 
