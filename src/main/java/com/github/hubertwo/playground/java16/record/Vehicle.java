@@ -19,7 +19,10 @@ public record Vehicle(
      * Always called.
      */
     public Vehicle {
-        Objects.requireNonNull(passengers, "Passengers can not be null");
+        if (Objects.isNull(passengers)) {
+            throw new IllegalArgumentException("Passengers can not be null");
+        }
+
         if (Objects.isNull(price) || price.compareTo(BigDecimal.ZERO) < 0) {
             throw new IllegalArgumentException("Price cannot be smaller than 0.");
         }

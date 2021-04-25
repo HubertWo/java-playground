@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.io.InvalidObjectException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.lang.reflect.Modifier;
 import java.math.BigDecimal;
 
 import static org.assertj.core.api.Assertions.catchThrowable;
@@ -21,6 +22,14 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class VehicleTest {
+
+    @Test
+    @DisplayName("Records are final")
+    public void canNotExtendRecord() {
+        boolean isFinal = Modifier.isFinal(Vehicle.class.getModifiers());
+
+        assertThat(isFinal).isTrue();
+    }
 
     @Test
     @DisplayName("Create new instance")
@@ -45,7 +54,7 @@ class VehicleTest {
                         givenPassengers
                 ));
 
-        assertThat(actualException).isInstanceOf(NullPointerException.class)
+        assertThat(actualException).isInstanceOf(IllegalArgumentException.class)
                 .hasMessage("Passengers can not be null");
     }
 
@@ -163,5 +172,4 @@ class VehicleTest {
         assertThat(actualString).isEqualTo(
                 "Vehicle[name=Velomobile, energySource=Legs, isEco=true, price=1, passengers=[]]");
     }
-
 }
