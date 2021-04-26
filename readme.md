@@ -20,14 +20,15 @@ mvn test
 
 ## Java 16 
  - [Record Classes](src/test/java/com/github/hubertwo/playground/java16/record/VehicleTest.java)
- - [Streams](src/test/java/com/github/hubertwo/playground/java16/streams/StreamTest.java)
--  [Pattern matching for instanceof](src/test/java/com/github/hubertwo/playground/java16/instance/InstanceOfTest.java)
--  [Switch Expressions (yield)](src/test/java/com/github/hubertwo/playground/java16/swtichexpression/SwitchExpressionTest.java)
+ - [Streams toList()](src/test/java/com/github/hubertwo/playground/java16/streams/StreamTest.java)
+ - [Streams mapMulti()](src/test/java/com/github/hubertwo/playground/java16/streams/StreamTest.java)
+ - [Pattern matching for instanceof](src/test/java/com/github/hubertwo/playground/java16/instance/InstanceOfTest.java)
+ - [Switch Expressions (yield)](src/test/java/com/github/hubertwo/playground/java16/swtichexpression/SwitchExpressionTest.java)
 
 ## Java 15
-- [Text Blocks](src/test/java/com/github/hubertwo/playground/java15/string/TextBlocksTest.java)
+ - [Text Blocks](src/test/java/com/github/hubertwo/playground/java15/string/TextBlocksTest.java)
 ## Old Java
-- [POJO deserialization issue](src/test/java/com/github/hubertwo/playground/javaold/serialization/SerializationTest.java)
+ - [POJO deserialization issue](src/test/java/com/github/hubertwo/playground/javaold/serialization/SerializationTest.java)
 
 # Read more
 1. [Even more greatness packed into Java 16, including tools for improving future JVMs](https://blogs.oracle.com/javamagazine/java-champion-more-favorite-java16-features)
