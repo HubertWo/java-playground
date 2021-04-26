@@ -14,7 +14,7 @@ mvn test
 ```
 ```shell
 [INFO] Results:
-[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0
+[INFO] Tests run: X, Failures: 0, Errors: 0, Skipped: 0
 [INFO] BUILD SUCCESS
 ```
 

@@ -49,6 +49,7 @@ class StreamTest {
                 .mapMulti((List<String> list, Consumer<String> downstream) -> {
                     // Add each element to downstream
                     // The point here is that we decide how to add elements to downstream.
+                    // That might be helpful when converting element to Stream directly is hard to achieve.
                     list.forEach(letter -> downstream.accept(letter));
                 })
                 .collect(Collectors.toList());
