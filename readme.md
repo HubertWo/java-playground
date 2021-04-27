@@ -22,6 +22,7 @@ mvn test
  - [Record Classes](src/test/java/com/github/hubertwo/playground/java16/record/VehicleTest.java)
  - [Streams toList()](src/test/java/com/github/hubertwo/playground/java16/streams/StreamTest.java)
  - [Streams mapMulti()](src/test/java/com/github/hubertwo/playground/java16/streams/StreamTest.java)
+   - [Read more ↗](https://nipafx.dev/java-16-stream-mapmulti/)
  - [Pattern matching for instanceof](src/test/java/com/github/hubertwo/playground/java16/instance/InstanceOfTest.java)
  - [Switch Expressions (yield)](src/test/java/com/github/hubertwo/playground/java16/swtichexpression/SwitchExpressionTest.java)
 
