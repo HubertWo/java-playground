@@ -18,6 +18,9 @@ mvn test
 [INFO] BUILD SUCCESS
 ```
 
+## Topics
+Click on the topic to jump straight to code example.
+
 ## Java 16 
  - [Record Classes](src/test/java/com/github/hubertwo/playground/java16/record/VehicleTest.java)
  - [Streams toList()](src/test/java/com/github/hubertwo/playground/java16/streams/StreamTest.java)
