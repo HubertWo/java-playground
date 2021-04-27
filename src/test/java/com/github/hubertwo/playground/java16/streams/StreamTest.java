@@ -5,8 +5,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
-import java.util.function.Consumer;
-import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -34,36 +32,33 @@ class StreamTest {
 
     @Test
     @DisplayName("Stream.mapMulti and Stream.flatMap - combine lists")
-    @SuppressWarnings({"Convert2MethodRef", "FunctionalExpressionCanBeFolded"})
-        // For example readability
-    void mapMulti() {
-        final List<String> expectedList = List.of("A", "B", "C", "D");
+    @SuppressWarnings({"Convert2MethodRef", "FunctionalExpressionCanBeFolded"}) /* For example readability */
+    void mapMulti_lists() {
+        List<String> expectedList = List.of("A", "B", "C", "D");
 
-        List<List<String>> listOfLists = ImmutableList.of(
+        List<List<String>> givenListOfLists = ImmutableList.of(
                 List.of("A", "B"),
                 List.of("C", "D")
         );
 
         // multiMap
-        List<String> multiMapResult = listOfLists.stream()
-                .mapMulti((List<String> list, Consumer<String> downstream) -> {
+        List<String> multiMapResult = givenListOfLists.stream()
+                .<String>mapMulti((list, downstream) -> {
                     // Add each element to downstream
-                    // The point here is that we decide how to add elements to downstream.
+                    // The point here is we decide how to add elements to downstream.
                     // That might be helpful when converting element to Stream directly is hard to achieve.
                     list.forEach(letter -> downstream.accept(letter));
                 })
-                .collect(Collectors.toList());
+                .toList();
 
         // flatMap
-        List<String> flatMapResult = listOfLists.stream()
+        List<String> flatMapResult = givenListOfLists.stream()
                 // Convert each list to Stream and let flatMap combine them
                 .flatMap(list -> list.stream())
-                .collect(Collectors.toList());
+                .toList();
 
         assertThat(multiMapResult).containsExactlyElementsOf(expectedList);
         assertThat(flatMapResult).containsExactlyElementsOf(expectedList);
     }
-
-    // TODO: another example of flatMap that shows advantage over flatMap
 }
 
