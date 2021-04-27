@@ -34,6 +34,9 @@ Click on the topic to jump straight to code example.
 ## Old Java
  - [POJO deserialization issue](src/test/java/com/github/hubertwo/playground/javaold/serialization/SerializationTest.java)
 
+## Java 12
+- [Streams teeing](src/test/java/com/github/hubertwo/playground/java12/streams/StreamTest.java)
+
 # Read more
 1. [Even more greatness packed into Java 16, including tools for improving future JVMs](https://blogs.oracle.com/javamagazine/java-champion-more-favorite-java16-features)
 2. [Record Classes](https://docs.oracle.com/en/java/javase/16/language/records.html)
