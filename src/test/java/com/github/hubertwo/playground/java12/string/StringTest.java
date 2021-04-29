@@ -12,7 +12,7 @@ class StringTest {
     void indent() {
         // @formatter:off
         String givenString = """
-                 This is text has           
+                 This text has           
                   spaces at the beginning and end of each line. Next line contains 18 spaces only.  
                                   
                      We want to have (5) 
@@ -20,7 +20,7 @@ class StringTest {
                 indented.     """;
 
         String expectedString = """
-               This is text has
+               This text has
                spaces at the beginning and end of each line. Next line contains 18 spaces only.
                 
                We want to have (5)
