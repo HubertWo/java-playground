@@ -4,6 +4,8 @@ All examples are in form of unit tests, so you can try them by your own and test
 
 [![Build status](https://github.com/hubertwo/java-playground/actions/workflows/maven.yml/badge.svg)](https://github.com/HubertWo/java-playground/actions)
 
+If you like the repo don't forget to leave a ⭐️ Thanks!
+
 ### Quick start
 To clone the repository and run all tests run commands bellow.
 Project requires Java 16 and Maven.
