@@ -36,6 +36,8 @@ Click on the topic to jump straight to code example.
 
 ## Java 12
 - [Streams teeing](src/test/java/com/github/hubertwo/playground/java12/streams/StreamTest.java)
+- [String indent](src/test/java/com/github/hubertwo/playground/java12/string/StringTest.java)
+
 
 # Read more
 1. [Even more greatness packed into Java 16, including tools for improving future JVMs](https://blogs.oracle.com/javamagazine/java-champion-more-favorite-java16-features)
