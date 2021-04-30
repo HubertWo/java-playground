@@ -21,8 +21,7 @@ class StreamTest {
         List<Integer> actualNumbers = IntStream.range(0, 10)
                 .filter(i -> i % 2 == 0)
                 .boxed()
-                // Try to use Java 8 Collector.toList
-                // .collect(Collectors.toList());
+                // Try to use.collect(Collectors.toList());
                 .toList();
 
         assertThat(actualNumbers).containsExactlyElementsOf(expectedEvenNumbers);
