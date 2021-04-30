@@ -39,6 +39,7 @@ Click on the topic to jump straight to code example.
 ## Java 12
 - [Streams teeing](src/test/java/com/github/hubertwo/playground/java12/streams/StreamTest.java)
 - [Strings - indent(), transform()](src/test/java/com/github/hubertwo/playground/java12/string/StringTest.java)
+- [Files.mismatch](src/test/java/com/github/hubertwo/playground/java12/files/FilesTests.java)
 
 
 # Read more
