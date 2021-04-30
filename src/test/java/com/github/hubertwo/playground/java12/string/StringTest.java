@@ -8,7 +8,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 class StringTest {
 
     @Test
-    @DisplayName("String.indent")
+    @DisplayName("New String.indent method")
     void indent() {
         // @formatter:off
         String givenString = """
@@ -33,4 +33,17 @@ class StringTest {
 
         assertThat(actualString).isEqualTo(expectedString);
     }
+
+    @Test
+    @DisplayName("New String.transform method")
+    void transform() {
+        String givenString = "Transform me!";
+
+        String actualString = givenString.transform(inputString -> {
+            return inputString.toUpperCase();
+        });
+
+        assertThat(actualString).isEqualTo("TRANSFORM ME!");
+    }
+
 }
