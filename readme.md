@@ -41,6 +41,9 @@ Click on the topic to jump straight to code example.
 - [Strings - indent(), transform()](src/test/java/com/github/hubertwo/playground/java12/string/StringTest.java)
 - [Files.mismatch](src/test/java/com/github/hubertwo/playground/java12/files/FilesTests.java)
 
+## Java 11
+- [Strings - isBlank, lines, repeat, strip](src/test/java/com/github/hubertwo/playground/java11/string/StringTest.java)
+
 
 # Read more
 1. [Even more greatness packed into Java 16, including tools for improving future JVMs](https://blogs.oracle.com/javamagazine/java-champion-more-favorite-java16-features)
