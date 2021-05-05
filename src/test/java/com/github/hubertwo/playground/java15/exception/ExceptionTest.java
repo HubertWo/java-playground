@@ -13,9 +13,9 @@ public class ExceptionTest {
     public void descriptiveNullPointerException() {
         Kettle kettle = new Kettle(/*isPluggedIn*/ true, /*isFilled*/ null);
 
-        NullPointerException actialException = assertThrows(NullPointerException.class, kettle::boilWater);
+        NullPointerException actualException = assertThrows(NullPointerException.class, kettle::boilWater);
 
-        assertThat(actialException).hasMessage("""
+        assertThat(actualException).hasMessage("""
                 Cannot invoke "java.lang.Boolean.booleanValue()" because "this.isFilled" is null""");
     }
 
