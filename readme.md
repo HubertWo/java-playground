@@ -33,6 +33,7 @@ Click on the topic to jump straight to code example.
 
 ## Java 15
  - [Text Blocks](src/test/java/com/github/hubertwo/playground/java15/string/TextBlocksTest.java)
+ - [Code details in exception message](src/test/java/com/github/hubertwo/playground/java15/exception/ExceptionTest.java)
 ## Old Java
  - [POJO deserialization issue](src/test/java/com/github/hubertwo/playground/javaold/serialization/SerializationTest.java)
 
