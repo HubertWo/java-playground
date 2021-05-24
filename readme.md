@@ -34,8 +34,6 @@ Click on the topic to jump straight to code example.
 ## Java 15
  - [Text Blocks](src/test/java/com/github/hubertwo/playground/java15/string/TextBlocksTest.java)
  - [Code details in exception message](src/test/java/com/github/hubertwo/playground/java15/exception/ExceptionTest.java)
-## Old Java
- - [POJO deserialization issue](src/test/java/com/github/hubertwo/playground/javaold/serialization/SerializationTest.java)
 
 ## Java 12
 - [Streams teeing](src/test/java/com/github/hubertwo/playground/java12/streams/StreamTest.java)
@@ -44,6 +42,12 @@ Click on the topic to jump straight to code example.
 
 ## Java 11
 - [Strings - isBlank, lines, repeat, strip](src/test/java/com/github/hubertwo/playground/java11/string/StringTest.java)
+
+## Java 9 
+- [Streams - iterate, dropWhile, takeWhile](src/test/java/com/github/hubertwo/playground/java9/streams/StreamsTest.java)
+
+## Old Java
+- [POJO deserialization issue](src/test/java/com/github/hubertwo/playground/javaold/serialization/SerializationTest.java)
 
 
 # Read more
